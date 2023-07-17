@@ -17,7 +17,7 @@ body {
 .header p{
     font-weight: bold;
 }
-.select{
+#select{
     background-color:red;
     color:white;
     border-radius: 10px;
