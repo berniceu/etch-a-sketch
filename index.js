@@ -52,3 +52,9 @@ function colorDiv() {
         this.style.backgroundColor('black');
     }
 }
+
+
+function resetGrid() {
+    let divs = document.querySelectorAll('div');
+    divs.forEach((div) => div.style.backgroundColor ="white");
+}
