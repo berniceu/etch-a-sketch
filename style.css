@@ -10,6 +10,7 @@ body {
     align-items: center;
     width: 200px;
     justify-content: space-around;
+    margin-bottom: 10px;
 
 }
 
@@ -30,6 +31,7 @@ body {
     justify-content: space-between;
     width: 300px;
     align-items: center;
+    margin-top: 20px;
     
 
 }
@@ -54,3 +56,9 @@ body {
     padding: 8px;
     border-color: navy;
 }   
+#container {
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    display: grid;
+}
