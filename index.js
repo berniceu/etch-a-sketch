@@ -1,14 +1,14 @@
 let color = "black";
 
+
 document.addEventListener("DOMContentLoaded", function(){
-    createGrid(16);
 
     let selectButton = document.querySelector("#select");
     selectButton.addEventListener("click", function(){
         let size = getSize();
         createGrid(size);
-    })
-})
+    });
+});
 function createGrid(size) {
     const container = document.querySelector("#container");
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -19,7 +19,7 @@ function createGrid(size) {
     for(let i = 0; i < numSquares; i++) {
         let div = document.createElement("div");
         div.addEventListener("mouseover", colorDiv)
-        container.insertAdjacentElement("beforeend", div);
+        container.appendChild(div);
     }
 }
 
@@ -49,10 +49,10 @@ function colorDiv() {
 
     }
     else{
-        this.style.backgroundColor('black');
+        this.style.backgroundColor = 'black';
     }
 }
-function setColor(color) {
+function setColor(colorChoice) {
     color = colorChoice;
 }
 
