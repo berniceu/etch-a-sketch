@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     let selectButton = document.querySelector("#select");
     selectButton.addEventListener("click", function(){
-        let inputSize = getSize();
+        let size = getSize();
         createGrid(size);
     })
 })
@@ -51,6 +51,9 @@ function colorDiv() {
     else{
         this.style.backgroundColor('black');
     }
+}
+function setColor(color) {
+    color = colorChoice;
 }
 
 
