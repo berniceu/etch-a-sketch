@@ -7,7 +7,26 @@ document.addEventListener("DOMContentLoaded", function(){
     selectButton.addEventListener("click", function(){
         let size = getSize();
         createGrid(size);
+
     });
+    let darkButton = document.querySelector(".dark");
+    darkButton.addEventListener("click", function(){
+        let colorChoice = 'black';
+        setColor(colorChoice);
+        colorDiv();
+    });
+
+    let randomButton = document.querySelector(".randomColor");
+    randomButton.addEventListener("click", function(){
+        let colorChoice = 'random';
+        setColor(colorChoice);
+        colorDiv();
+    });
+
+    let resetButton = document.querySelector(".reset");
+    resetButton.addEventListener("click", function(){
+        resetGrid();
+    })
 });
 function createGrid(size) {
     const container = document.querySelector("#container");
@@ -17,9 +36,9 @@ function createGrid(size) {
     let numSquares = size * size;
 
     for(let i = 0; i < numSquares; i++) {
-        let div = document.createElement("div");
-        div.addEventListener("mouseover", colorDiv)
-        container.appendChild(div);
+        let divs = document.createElement("div");
+        divs.addEventListener("mouseover", colorDiv)
+        container.appendChild(divs);
     }
 }
 
